@@ -37,5 +37,5 @@ st.subheader("4. Attendance & Overtime")
 st.dataframe(att_view, use_container_width=True, hide_index=True)
 
 st.subheader("5. Department Payroll Comparison Chart")
-hart_df = pay_view.set_index("department_name")[["actual_payroll_cost", "budget_payroll_cost"]]
+chart_df = pay_view.set_index("department_name")[["actual_payroll_cost", "budget_payroll_cost"]]
 st.bar_chart(chart_df)    
