@@ -6,7 +6,7 @@ st.title("📊 PulseIQ Workforce & Executive Analytics")
 st.caption("Reporting Period: September 2026 | Data Cut-off Date: 2026-09-30")
 
 REPORT_PATH = "reports/PulseIQ_Monthly_Report_2026-09.xlsx"
-RAW_DATA_PATH = "Data/PulseIQ_Dataset.xlsx"
+RAW_DATA_PATH = "PulseIQ_Dataset.xlsx"
 
 # --- LOAD DATA WITH CACHING ---
 @st.cache_data
