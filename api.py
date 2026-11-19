@@ -99,3 +99,16 @@ def high_attrition_risk():
         "Count of active employees classified in the 'High' attrition risk band.",
         "PulseIQ_Dataset.xlsx -> dim_employee + fact_attrition_risk (risk_band)"
     )
+@app.get("/metrics/attrition-risk-rate")
+def attrition_risk_rate():
+    df = get_unified_df()
+    val = round(float((df["risk_band"] == "High").mean() * 100), 2) if len(df) > 0 else 0.0
+    return format_metric(
+        "High Attrition Risk Rate", val, "%",
+        "Percentage of active employees classified in the 'High' attrition risk band.",
+        "PulseIQ_Dataset.xlsx -> dim_employee + fact_attrition_risk (risk_band)"
+    )    
+    
+    
+   
+    
